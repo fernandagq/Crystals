@@ -16,10 +16,18 @@ body {
 	);
 background-blend-mode: multiply;
     color: white;
+    font-family: courier;
 }
 
 #title {
     font-weight: normal;
+    color: yellow;
+    border: double 20px salmon;
+    padding: 20px;
+    margin: 20px;
+}
+
+h2 {
     color: yellow;
 }
 img{
@@ -30,7 +38,7 @@ img{
 }
 
 #rule-container {
-    border: solid orange;
+    
     padding: 20px;
 }
 li {
