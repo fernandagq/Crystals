@@ -106,28 +106,25 @@
             console.log(stoneValueFour);
                 
             function reset(){
-                Random=Math.floor(Math.random()*(120-19)+1);
-                console.log(Random)
+                random= (Math.floor(Math.random()*(120-19)+19));
+                console.log(random)
                 stoneValueOne= Math.floor(Math.random()*(12-1)+1);
                 stoneValueTwo= Math.floor(Math.random()*(12-1)+1);
                 stoneValueThree= Math.floor(Math.random()*(12-1)+1);
                 stoneValueFour= Math.floor(Math.random()*(12-1)+1);
-                score= 0;
-                $("#random-number").text(random);
                 $("#img1").attr("value", stoneValueOne);
                 $("#img2").attr("value", stoneValueTwo);
                 $("#img3").attr("value", stoneValueThree);
                 $("#img4").attr("value", stoneValueFour);
-                $("#random-number").attr("value", random)
-                $("#random-number").text(Random);
-
+                $("#random-number").text(random);
+                score=0;
 
                     }  
            
            
              
            
-           if (losses<10) {
+           
                 
             $("#click-me").on("click", function() {
              
@@ -135,9 +132,6 @@
 
              reset();
 
-            
-       
-             console.log("random number:", Random)
         
              });
 
@@ -153,14 +147,14 @@
                     
                     if (score == random) {
 
-                        wins++;
+                        wins+=1;
                         $("#Wins").text(wins);
                         console.log(score);
                         reset();
                         
 
                     } else if (score > random){
-                        losses++;
+                        losses+=1;
                         console.log(score);
                         console.log ("losses:", losses);
                         $("#Losses").text(losses);
@@ -171,9 +165,7 @@
 
 
                 });
-            }   else if (losses>10){
-                location.reload ();
-            }
+             
 
             
 
