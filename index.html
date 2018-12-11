@@ -119,9 +119,11 @@
                 $("#img3").attr("value", stoneValueThree);
                 $("#img4").attr("value", stoneValueFour);
                 $("#random-number").attr("value", random)
+                $("#random-number").text(Random);
+
 
                     }  
-            reset();
+           
            
              
            
@@ -133,9 +135,9 @@
 
              reset();
 
-             $("#random-number").html(random);
+            
        
-             console.log("random number:", random)
+             console.log("random number:", Random)
         
              });
 
@@ -155,7 +157,7 @@
                         $("#Wins").text(wins);
                         console.log(score);
                         reset();
-                        $("#random-number").html(random);
+                        
 
                     } else if (score > random){
                         losses++;
@@ -163,7 +165,8 @@
                         console.log ("losses:", losses);
                         $("#Losses").text(losses);
                         reset();
-                        $("#random-number").html(random);
+                        
+                        
                     }
 
 
