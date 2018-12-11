@@ -108,22 +108,32 @@
             function reset(){
                 Random=Math.floor(Math.random()*(120-19)+1);
                 console.log(Random)
-                $("#randomNumber").text(Random);
                 stoneValueOne= Math.floor(Math.random()*(12-1)+1);
                 stoneValueTwo= Math.floor(Math.random()*(12-1)+1);
                 stoneValueThree= Math.floor(Math.random()*(12-1)+1);
                 stoneValueFour= Math.floor(Math.random()*(12-1)+1);
                 score= 0;
+                $("#random-number").text(random);
+                $("#img1").attr("value", stoneValueOne);
+                $("#img2").attr("value", stoneValueTwo);
+                $("#img3").attr("value", stoneValueThree);
+                $("#img4").attr("value", stoneValueFour);
+                $("#random-number").attr("value", random)
+
                     }  
             reset();
+           
+             
            
            if (losses<10) {
                 
             $("#click-me").on("click", function() {
              
-             $("#random-number").html(random);
+             
 
              reset();
+
+             $("#random-number").html(random);
        
              console.log("random number:", random)
         
@@ -145,6 +155,7 @@
                         $("#Wins").text(wins);
                         console.log(score);
                         reset();
+                        $("#random-number").html(random);
 
                     } else if (score > random){
                         losses++;
@@ -152,11 +163,16 @@
                         console.log ("losses:", losses);
                         $("#Losses").text(losses);
                         reset();
+                        $("#random-number").html(random);
                     }
 
 
                 });
+            }   else if (losses>10){
+                location.reload ();
             }
+
+            
 
             
 
